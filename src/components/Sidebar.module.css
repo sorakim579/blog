@@ -1,0 +1,209 @@
+.sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--naver-border);
+  padding: 16px;
+  border-radius: 2px; /* Naver blog styles are quite boxy/square */
+  display: flex;
+  flex-direction: column;
+}
+
+.profileImageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--naver-border);
+  background-color: #fafafa;
+}
+
+.profileInfo {
+  margin-bottom: 14px;
+}
+
+.nameSection {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.nickname {
+  font-weight: 700;
+  font-size: 14px;
+  color: #333333;
+}
+
+.realname {
+  font-size: 11px;
+  color: var(--naver-text-muted);
+}
+
+.bio {
+  font-size: 12px;
+  color: var(--naver-text-sub);
+  line-height: 1.6;
+}
+
+.profileButtons {
+  display: flex;
+  gap: 6px;
+}
+
+.primaryBtn, .secondaryBtn {
+  flex: 1;
+  font-size: 11px;
+  padding: 6px 0;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.primaryBtn {
+  background-color: var(--naver-green);
+  color: #ffffff;
+}
+
+.primaryBtn:hover {
+  background-color: var(--naver-green-hover);
+}
+
+.secondaryBtn {
+  background-color: #f7f7f7;
+  border: 1px solid #e2e2e2;
+  color: #555555;
+}
+
+.secondaryBtn:hover {
+  background-color: #efefef;
+}
+
+/* Counter Card */
+.counterCard {
+  padding: 8px 12px;
+}
+
+.visitorCounter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.visitorItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visitorLabel {
+  font-size: 10px;
+  color: var(--naver-text-muted);
+  font-weight: 600;
+}
+
+.visitorValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--naver-border);
+}
+
+/* Category Menu */
+.cardTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.navMenu ul {
+  list-style: none;
+}
+
+.navMenu li {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.navMenu li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--naver-text-sub);
+  padding: 2px 0;
+}
+
+.navMenu li a:hover {
+  color: var(--naver-green);
+}
+
+.activeLi > a {
+  font-weight: 700;
+  color: var(--naver-green) !important;
+}
+
+.subCategory {
+  padding-left: 4px;
+}
+
+.count {
+  font-size: 10px;
+  color: var(--naver-text-muted);
+}
+
+.writeLink {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--naver-border);
+  color: var(--naver-green) !important;
+  font-weight: 500;
+}
+
+/* Links widget */
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkItem {
+  font-size: 12px;
+  color: var(--naver-text-sub);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+  width: 100%;
+}
+
+.linkItem:hover {
+  color: var(--naver-green);
+}
+
+.linkIcon {
+  font-size: 14px;
+}

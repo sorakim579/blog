@@ -1,0 +1,135 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--naver-border);
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.bannerContent {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.title:hover {
+  color: #ffffff !important;
+}
+
+.subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Navigation bar styling */
+.navbar {
+  height: 48px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--naver-border);
+  display: flex;
+  align-items: center;
+}
+
+.navContainer {
+  max-width: 966px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.navLinks a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: var(--naver-green);
+}
+
+.activeLink {
+  color: var(--naver-green) !important;
+  font-weight: 700 !important;
+}
+
+.activeLink::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--naver-green);
+}
+
+.blogUrl {
+  font-size: 11px;
+  color: var(--naver-text-muted);
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .navbar {
+    height: auto;
+  }
+
+  .navLinks {
+    gap: 16px;
+  }
+
+  .navLinks a {
+    height: auto;
+    padding: 4px 0;
+  }
+  
+  .blogUrl {
+    display: none;
+  }
+}
